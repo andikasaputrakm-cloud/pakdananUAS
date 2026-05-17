@@ -1,0 +1,51 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FF4081"
+    android:padding="20dp">
+
+
+    <!-- TITLE -->
+
+    <ImageView
+        android:id="@+id/imgHome"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sandwich"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SANDWICH KATALOG"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"/>
+
+
+    <!-- ICON (simple emoji style biar aman) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🥪 🍔 🥙"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp"/>
+
+    <!-- BUTTON -->
+    <Button
+        android:id="@+id/btnMasuk"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="MASUK KATALOG"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#ffff"
+        android:textColor="#FF4081"
+        android:textStyle="bold"/>
+
+</LinearLayout>

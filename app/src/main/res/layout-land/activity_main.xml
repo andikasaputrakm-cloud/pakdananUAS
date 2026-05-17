@@ -1,0 +1,88 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="#FF4081">
+
+    <!-- LEFT PANEL -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SANDWICH MENU"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:padding="8dp"/>
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Cari..."
+            android:textColor="#000000"
+            android:textColorHint="#FFFFFF"
+            android:background="#FCE4EC"/>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEARCH"
+            android:backgroundTint="#000000"
+            android:textColor="#FF4081"/>
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Tambah sandwich "
+            android:textColor="#000000"
+            android:textColorHint="#FFFFFF"
+            android:background="#FCE4EC"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TAMBAH"
+            android:backgroundTint="#000000"
+            android:textColor="#FF4081"/>
+
+    </LinearLayout>
+
+    <!-- RIGHT PANEL -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LIST MENU"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FCE4EC"/>
+
+    </LinearLayout>
+
+</LinearLayout>
