@@ -77,11 +77,14 @@
             android:gravity="center"
             android:padding="8dp"/>
 
-        <ListView
-            android:id="@+id/listView"
+        <GridView
+            android:id="@+id/gridView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FCE4EC"/>
+            android:numColumns="2"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"/>
 
     </LinearLayout>
 

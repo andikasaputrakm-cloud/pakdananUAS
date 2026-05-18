@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">pakdananUAS</string>
+    <string name="sandwich_menu">SANDWICH MENU</string>
+    <string name="search_hint">Cari...</string>
+    <string name="search_button">SEARCH</string>
+    <string name="add_sandwich_hint">Tambah sandwich</string>
+    <string name="add_button">TAMBAH</string>
+    <string name="list_menu">LIST MENU</string>
+</resources>
