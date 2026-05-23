@@ -38,6 +38,31 @@
         android:backgroundTint="#000000"
         android:textColor="#FF4081"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <Button
+            android:id="@+id/btnAZ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SORT A-Z"
+            android:backgroundTint="#000000"
+            android:textColor="#FF4081"/>
+
+        <Button
+            android:id="@+id/btnZA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SORT Z-A"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FF4081"/>
+    </LinearLayout>
     <!-- INPUT -->
     <EditText
         android:id="@+id/etInput"
@@ -77,5 +102,7 @@
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:stretchMode="columnWidth"/>
+
+
 
 </LinearLayout>
