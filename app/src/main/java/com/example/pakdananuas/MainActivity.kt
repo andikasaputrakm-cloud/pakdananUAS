@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.GridView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
@@ -59,41 +60,77 @@ class MainActivity : AppCompatActivity() {
 
         // TAMBAH MENU
         btnAdd.setOnClickListener {
-            val namaBaru =
-                etInput.text.toString().trim()
-            if (namaBaru.isEmpty()) {
-                etInput.error =
-                    "Nama sandwich tidak boleh kosong"
-                Toast.makeText(
-                    this,
-                    "Silakan isi nama menu",
-                    Toast.LENGTH_SHORT
-                ).show()
 
-            } else {
-                val newSandwich =
-                    Sandwich(namaBaru,
-                        R.drawable.sandwich,
-                        "Menu Baru",
-                        "Price TBD")
+            try {
 
-                dataList.add(newSandwich)
-                originalList.add(newSandwich)
-                adapter.notifyDataSetChanged()
-                etInput.text.clear()
+                val namaBaru =
+                    etInput.text.toString().trim()
 
-                Toast.makeText(
-                    this,
-                    "$namaBaru ditambahkan",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+                if (namaBaru.isEmpty()) {
+
+                    etInput.error =
+                        "Nama sandwich tidak boleh kosong"
+
+                    Toast.makeText(
+                        this,
+                        "Silahkan isi nama menu",
+                        Toast.LENGTH_SHORT)
+                        
+                    .show()
+
+        } else {
+
+            val newSandwich =
+                Sandwich(
+                    namaBaru,
+                    R.drawable.sandwich,
+                    "Menu Baru",
+                    "Price TBD"
+                )
+
+            dataList.add(newSandwich)
+            originalList.add(newSandwich)
+
+            Log.d(
+                "42430020",
+                "Menu ditambahkan: $namaBaru"
+            )
+
+            adapter.notifyDataSetChanged()
+            etInput.text.clear()
+
+            Toast.makeText(
+                this,
+                "$namaBaru ditambahkan",
+                Toast.LENGTH_SHORT
+            ).show()
         }
+
+    } catch (e: Exception) {
+
+        Log.e(
+            "42430020",
+            "Error: ${e.message}"
+        )
+
+        Toast.makeText(
+            this,
+            "Terjadi kesalahan",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+    }
 
         // SEARCH
         btnSearch.setOnClickListener {
             val keyword =
                 etSearch.text.toString().trim()
+            
+             Log.d(
+                "42430020",
+                "Mencari menu: $keyword"
+            )
+
             // JIKA KOSONG
             if (keyword.isEmpty()) {
                 dataList.clear()
@@ -134,6 +171,12 @@ class MainActivity : AppCompatActivity() {
 
         // SORT A-Z
         btnAZ.setOnClickListener {
+
+            Log.d(
+                "42430020",
+                "Sort A-Z dijalankan"
+            )
+
             for (i in 0 until dataList.size - 1) {
                 for (j in 0 until dataList.size - i - 1) {
                     if (dataList[j].nama > dataList[j + 1].nama)
@@ -156,6 +199,12 @@ class MainActivity : AppCompatActivity() {
 
         // SORT Z-A
         btnZA.setOnClickListener {
+
+            Log.d(
+                "42430020",
+                "Sort Z-A dijalankan"
+            )
+
             for (i in 0 until dataList.size - 1) {
                 for (j in 0 until dataList.size - i - 1) {
                     if (dataList[j].nama < dataList[j + 1].nama)
